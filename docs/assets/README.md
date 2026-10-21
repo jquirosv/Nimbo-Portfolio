@@ -17,6 +17,6 @@ The PNG files are unchanged copies of app-generated render fixtures. Synthetic s
 
 `00-cover.svg` is a presentation graphic created for this case study. It uses Nimbo's existing halo mark and navy, pearl, and lavender palette; it is not an application screenshot. `nimbo-logo.svg` is copied unchanged from the project's brand assets.
 
-StatisticsDesignTest generates the fictional statistics. MonthlyRecapTest generates the recap's placeholder artwork and listening data. Player and appearance layout tests generate the other selected views. The project UI is in Spanish; the primary case study is in English with a Spanish overview.
+StatisticsDesignTest generates the fictional statistics. MonthlyRecapTest generates the recap's placeholder artwork and listening data. Player and appearance layout tests generate the other selected views. The project UI is in Spanish; the README has complete English and Spanish presentations. The supporting technical documents are in English.
 
 Lyrics assistance uses [LRCLIB](https://lrclib.net/), credited here for its role in the application. This repository does not include provider responses or redistribute the provider's content. Application dependencies and fonts retain their respective licenses; their source and font binaries are not distributed here.

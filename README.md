@@ -8,7 +8,7 @@ Browse music on your phone and SD card, shape the player around your taste, and 
 
 **Kotlin · Jetpack Compose · Media3 · SQLite · Python / Flask**
 
-[Product tour](docs/PRODUCT_TOUR.md) · [Architecture](docs/ARCHITECTURE.md) · [Engineering decisions](docs/ENGINEERING.md) · [Validation](docs/VALIDATION.md)
+[Product tour](docs/PRODUCT_TOUR.md) · [Architecture](docs/ARCHITECTURE.md) · [Engineering decisions](docs/ENGINEERING.md) · [Validation](docs/VALIDATION.md) · [Español](#nimbo-en-español)
 
 ## The experience
 
@@ -91,16 +91,96 @@ Lyrics lookup integrates [LRCLIB](https://lrclib.net/). The screenshots use fict
 **José Pablo Quirós Vásquez** · [GitHub](https://github.com/jquirosv) · [LinkedIn](https://www.linkedin.com/in/jquirosv/)
 
 <details>
-<summary>Leer en español</summary>
+<summary>Español — presentación completa</summary>
 
-### Tu biblioteca. Tu historia musical.
+## Nimbo en español
 
-Nimbo es un reproductor nativo para Android que combina música local, personalización y estadísticas de escucha. Permite organizar archivos del teléfono y la tarjeta SD, escuchar en segundo plano, editar información local y consultar letras con revisión de resultados.
+**Un reproductor nativo para Android que convierte tu biblioteca local en una experiencia musical personal.**
 
-Desarrollé la interfaz con Kotlin y Jetpack Compose, la reproducción con Media3, la persistencia SQLite y la API de cuentas y respaldos con Python, Flask y MySQL. Los respaldos incluyen estadísticas y metadatos mínimos; el audio, las letras, las portadas y las rutas no forman parte del respaldo remoto.
+Explora la música de tu teléfono y tarjeta SD, adapta el reproductor a tu estilo y redescubre tus escuchas con estadísticas e historias mensuales para compartir.
 
-Los resúmenes mensuales tienen siete historias y se comparten como imágenes o video. Su audio es independiente del reproductor y no altera las estadísticas. La personalización incluye temas, tipografías, fondos y portadas por tema, junto con adaptaciones para texto grande, orientación horizontal y movimiento reducido.
+**Kotlin · Jetpack Compose · Media3 · SQLite · Python / Flask**
 
-La revisión de CI del código privado aprobó 158 pruebas Android y 12 de Python. Este repositorio presenta el producto, su arquitectura, decisiones técnicas y evidencia visual; el código de la aplicación se mantiene privado.
+[Recorrido del producto](docs/PRODUCT_TOUR.md) · [Arquitectura](docs/ARCHITECTURE.md) · [Decisiones técnicas](docs/ENGINEERING.md) · [Validación](docs/VALIDATION.md). Documentación ampliada en inglés.
+
+### La experiencia
+
+<p align="center">
+  <img src="docs/assets/01-player.png" alt="Reproductor de Nimbo con ilustración de vinilo y texto grande" width="30%">
+  &nbsp;
+  <img src="docs/assets/02-statistics.png" alt="Resumen de escucha con estadísticas y clasificación de canciones" width="30%">
+  &nbsp;
+  <img src="docs/assets/03-appearance.png" alt="Ajustes de apariencia, temas y tipografía" width="30%">
+</p>
+
+Reproducción, estadísticas y personalización. Son renders reales de la aplicación con datos ficticios de prueba; las versiones y los ajustes de accesibilidad están identificados en la [guía de imágenes](docs/assets/README.md).
+
+### Por qué lo desarrollé
+
+Una colección musical es más que una lista de archivos. Quise crear un reproductor que cuide esa colección: organización útil, reproducción fiable en segundo plano, opciones visuales personales y una forma de recordar lo que escuchaste.
+
+Mi trabajo abarca la interfaz Android, el servicio de reproducción, la persistencia local, las estadísticas, la composición y exportación de resúmenes y la API de cuentas y respaldos estadísticos. La versión revisada es **0.8.0**, para **Android 10 y posteriores**.
+
+### Funcionalidades
+
+| Área | Capacidades |
+| --- | --- |
+| Biblioteca | Detección mediante MediaStore, teléfono y tarjeta SD, búsqueda, álbumes, artistas, géneros, carpetas, favoritos y selección múltiple. |
+| Reproducción | Segundo plano, notificación multimedia, cola, aleatorio, repetición, temporizador y gestión del foco de audio mediante Media3. |
+| Listas | Reordenación y eliminación de ocurrencias individuales, incluidas canciones repetidas, con opción de deshacer. |
+| Personalización | Temas, paletas basadas en portadas, fondos, desenfoque, opacidad, tipografías y variantes de portada por tema. |
+| Metadatos y letras | Edición local de información y portadas; búsqueda de letras, revisión de candidatos y asistencia de copia web acotada. Conserva las etiquetas del archivo de audio original. |
+| Estadísticas | Historial separado por cuenta, resúmenes mensuales y anuales, clasificaciones de canciones y artistas y tiempo real de escucha. |
+| Historias mensuales | Siete tarjetas, instantáneas mensuales conservadas, imágenes PNG y video MP4 con audio independiente. |
+| Cuentas y respaldos | Cuentas, restauración de estadísticas y respaldo diario con reintentos persistentes y comprobaciones de sesión y revisión. |
+
+La reproducción utiliza archivos del dispositivo. Las cuentas y los respaldos remotos necesitan conexión; la consulta de letras utiliza un servicio externo. Los respaldos contienen estadísticas y metadatos mínimos: el audio, las letras, las portadas y las rutas de archivos quedan fuera de ellos.
+
+### Una mirada más cercana
+
+<p align="center">
+  <img src="docs/assets/04-recap-opening.png" alt="Inicio del resumen mensual: Así sonó tu septiembre" width="29%">
+  &nbsp;
+  <img src="docs/assets/05-recap-summary.png" alt="Cierre del resumen mensual con datos ficticios" width="29%">
+</p>
+
+Las historias comparten una misma composición gráfica para la vista en pantalla y la exportación. Su banda sonora se reproduce por separado del reproductor principal, de modo que consultar un resumen no añade tiempo de escucha a tus estadísticas.
+
+[Ver el recorrido visual completo →](docs/PRODUCT_TOUR.md)
+
+### Ingeniería detrás de la experiencia
+
+- **La reproducción continúa fuera de la pantalla.** El servicio Media3 controla el reproductor y su sesión, separando la navegación del ciclo de vida del audio.
+- **Los reintentos conservan la operación original.** El respaldo pendiente se guarda antes de enviarse y se reintenta sin cambiar su contenido hasta recibir confirmación. Se comprueban propietario, dispositivo, mes, revisión y generación.
+- **El tiempo de escucha sigue la reproducción.** Un reloj monotónico mide los intervalos activos, sin contar pausas ni saltos de posición. Los fragmentos de los resúmenes usan otro circuito de audio.
+- **Las ediciones conservan las relaciones.** Las actualizaciones SQLite mantienen las ocurrencias de listas y asociaciones de portadas; el guardado de letras comprueba los campos esperados para proteger cambios concurrentes.
+
+[Decisiones y compromisos técnicos →](docs/ENGINEERING.md)
+
+### Tecnologías
+
+| Capa | Tecnologías utilizadas |
+| --- | --- |
+| Android | Kotlin 2.2.20, Jetpack Compose, Material 3 y coroutines |
+| Multimedia | Media3 1.8.0: ExoPlayer, MediaSession, Transformer y efectos |
+| Integración con el dispositivo | MediaStore, WorkManager, Android Keystore y Canvas / Bitmap |
+| Persistencia | SQLite / SQLiteOpenHelper y SharedPreferences |
+| API | Python 3.13, Flask, Gunicorn, PyMySQL y MySQL 8.4 |
+| Entrega | Gradle, Docker y GitHub Actions |
+| Calidad | JUnit, Robolectric, pruebas Compose, instrumentación Android, unittest de Python, ktfmt y Ruff |
+
+### Validación
+
+La ejecución de integración continua revisada en el código privado aprobó **158 pruebas Android unitarias/Robolectric y 12 pruebas Python**. También se aprobaron el formato, Android lint y la compilación debug. Lint registró cero errores y 63 advertencias por variante. Estos resultados corresponden a la revisión de código indicada en la documentación; este repositorio de presentación no ejecuta las pruebas de la aplicación.
+
+[Evidencia, alcance y limitaciones →](docs/VALIDATION.md)
+
+### Acerca de este repositorio
+
+Esta es la ficha pública de Nimbo dentro de mi portafolio, con un historial independiente de documentación. El código de la aplicación, la configuración operativa, el material de firma y las versiones compiladas se mantienen por separado en privado.
+
+La consulta de letras integra [LRCLIB](https://lrclib.net/). Las capturas utilizan datos ficticios e ilustraciones originales de prueba; este repositorio no redistribuye un catálogo musical ni de letras. Consulta la [procedencia visual](docs/assets/README.md) y los [derechos de autor](COPYRIGHT.md).
+
+**José Pablo Quirós Vásquez** · [GitHub](https://github.com/jquirosv) · [LinkedIn](https://www.linkedin.com/in/jquirosv/)
 
 </details>
