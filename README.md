@@ -8,7 +8,7 @@ Browse music on your phone and SD card, shape the player around your taste, and 
 
 **Kotlin · Jetpack Compose · Media3 · SQLite · Python / Flask**
 
-[Product tour](docs/PRODUCT_TOUR.md) · [Architecture](docs/ARCHITECTURE.md) · [Engineering decisions](docs/ENGINEERING.md) · [Validation](docs/VALIDATION.md) · [Español](#nimbo-en-español)
+[Product tour](docs/PRODUCT_TOUR.md) · [Architecture](docs/ARCHITECTURE.md) · [Engineering decisions](docs/ENGINEERING.md) · [Validation](docs/VALIDATION.md) · [Español](#español)
 
 ## The experience
 
@@ -89,6 +89,8 @@ This is a public portfolio case study with an independent documentation history.
 Lyrics lookup integrates [LRCLIB](https://lrclib.net/). The screenshots use fictional fixtures and original placeholder artwork; this repository does not redistribute a music or lyrics catalog. See [asset provenance](docs/assets/README.md) and [copyright](COPYRIGHT.md).
 
 **José Pablo Quirós Vásquez** · [GitHub](https://github.com/jquirosv) · [LinkedIn](https://www.linkedin.com/in/jquirosv/)
+
+## Español
 
 <details>
 <summary>Español — presentación completa</summary>
