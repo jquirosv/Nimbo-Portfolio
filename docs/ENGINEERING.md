@@ -1,12 +1,12 @@
 # Engineering decisions
 
-[← Nimbo](../README.md)
+[← Nimbo Player](../README.md)
 
 ## 1. Give playlist entries their own identity
 
 The same track can appear more than once in a playlist. Treating the song ID as the entry identity makes reorder, remove, and playback operations target the wrong occurrence.
 
-Nimbo operates on playlist occurrences and positions. A repeated track can be removed or moved independently, and playback starts from the selected occurrence. Undo restores the corresponding operation rather than searching for the first matching song.
+Nimbo Player operates on playlist occurrences and positions. A repeated track can be removed or moved independently, and playback starts from the selected occurrence. Undo restores the corresponding operation rather than searching for the first matching song.
 
 ## 2. Update rows without destroying relationships
 
@@ -24,7 +24,7 @@ Version 0.8.0 separates listening ownership by account. Legacy history is claime
 
 A response can disappear after the server has accepted a backup. Rebuilding that retry from newer statistics would give one pending revision different meanings on consecutive requests.
 
-Nimbo persists the payload before sending and retries that same payload until acknowledgement. The pending state is scoped by owner, device, month, and generation. Revision conflicts are reconciled, and stale generations are rejected. Session epochs are checked around asynchronous responses to prevent a previous account's result from entering the current session.
+Nimbo Player persists the payload before sending and retries that same payload until acknowledgement. The pending state is scoped by owner, device, month, and generation. Revision conflicts are reconciled, and stale generations are rejected. Session epochs are checked around asynchronous responses to prevent a previous account's result from entering the current session.
 
 Daily scheduling includes the open month. Android may defer background work, so daily scheduling is supplemented by foreground attempts and does not promise an exact upload time.
 

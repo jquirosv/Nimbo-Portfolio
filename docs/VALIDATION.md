@@ -1,10 +1,21 @@
 # Validation and evidence
 
-[← Nimbo](../README.md)
+[← Nimbo Player](../README.md)
 
-## Reviewed source
+## Reviewed update — 0.8.1
 
-- Release described: **0.8.0**.
+- Review date: **October 21, 2026**.
+- Source revision: `e0168be160c7bf4601d1b5db6c64ceca33ee41e2`.
+- Branding revision: `b64117f0c7f998d514fcb6664ca0cf0c21431f76`.
+- Displayed name: **Nimbo Player**; version **0.8.1**, Android version code **20**.
+
+Source comparison confirms the updated Android name, onboarding and account copy, monthly recap branding, export names, and lyrics-request user agent. The existing sound halo keeps its paths and adds a central vinyl ring in the brand SVG and Android icon variants. Package, signing identity, persisted data, playback rules, and account API are preserved.
+
+The source handoff records successful Kotlin formatting, the affected navigation test, and a debug build for the branding change. These recorded checks were not rerun for this documentation update. The release workflow is private run `39713271268`; the full-suite counts below remain attributed to the previously inspected 0.8.0 baseline.
+
+## Inspected baseline — 0.8.0
+
+- Baseline release: **0.8.0**.
 - Review date: **October 21, 2026**.
 - Private source revision: `9f515e65d27f564c7853c69cf8301995e929251a`.
 - Private GitHub Actions run: `39560506032`, workflow **Checks**; Android and server jobs completed successfully.

@@ -1,8 +1,8 @@
 # Architecture
 
-[← Nimbo](../README.md)
+[← Nimbo Player](../README.md)
 
-Nimbo combines a native Android client with a Python API for accounts and statistical backups. Local media and playback belong to the Android side; the API does not host a streaming catalog.
+Nimbo Player combines a native Android client with a Python API for accounts and statistical backups. Local media and playback belong to the Android side; the API does not host a streaming catalog.
 
 ```mermaid
 flowchart TD
