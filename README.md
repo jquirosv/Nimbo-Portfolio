@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/00-cover.svg" alt="Nimbo Player — Your library. Your listening story." width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/jquirosv/Nimbo-Portfolio/bcc0241b44a0d502631a249618f9698cb2357fbc/docs/assets/00-cover.svg" alt="Nimbo Player — Your library. Your listening story." width="100%"></p>
 
 # Nimbo Player
 
