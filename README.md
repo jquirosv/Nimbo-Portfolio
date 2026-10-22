@@ -1,6 +1,6 @@
-<p align="center"><img src="docs/assets/00-cover.svg" alt="Nimbo — Your library. Your listening story." width="100%"></p>
+<p align="center"><img src="docs/assets/00-cover.svg" alt="Nimbo Player — Your library. Your listening story." width="100%"></p>
 
-# Nimbo
+# Nimbo Player
 
 **A native Android music player that turns a local library into a personal listening experience.**
 
@@ -8,12 +8,14 @@ Browse music on your phone and SD card, shape the player around your taste, and 
 
 **Kotlin · Jetpack Compose · Media3 · SQLite · Python / Flask**
 
+**0.8.1 update:** the app is now **Nimbo Player**. The original sound halo gains a central vinyl ring, with the new name reflected in Android, onboarding, monthly stories, and exports.
+
 [Product tour](docs/PRODUCT_TOUR.md) · [Architecture](docs/ARCHITECTURE.md) · [Engineering decisions](docs/ENGINEERING.md) · [Validation](docs/VALIDATION.md) · [Español](#español)
 
 ## The experience
 
 <p align="center">
-  <img src="docs/assets/01-player.png" alt="Nimbo player with a vinyl illustration and large text" width="30%">
+  <img src="docs/assets/01-player.png" alt="Nimbo Player with a vinyl illustration and large text" width="30%">
   &nbsp;
   <img src="docs/assets/02-statistics.png" alt="Listening overview with summary cards and song rankings" width="30%">
   &nbsp;
@@ -26,7 +28,7 @@ Browse music on your phone and SD card, shape the player around your taste, and 
 
 A music collection is more than a list of files. I wanted a player that gives local music the care of a personal collection: useful organization, reliable background playback, expressive visual choices, and a way to look back at what you listened to.
 
-My work spans the Android interface, playback service, local persistence, listening analytics, recap rendering and export, and the account and statistical backup API. The reviewed release is **0.8.0**, targeting Android 10 and later.
+My work spans the Android interface, playback service, local persistence, listening analytics, recap rendering and export, and the account and statistical backup API. The current reviewed version is **0.8.1**, targeting Android 10 and later.
 
 ## What it does
 
@@ -78,7 +80,7 @@ Monthly stories use a shared artboard for on-screen rendering and exported media
 
 ## Validation
 
-The reviewed private-source CI run passed **158 Android unit/Robolectric tests and 12 Python tests**. Formatting, Android lint, and the debug build also passed. Lint reported no errors and 63 warnings per variant. These results describe the reviewed source revision, rather than a workflow running in this documentation repository.
+The inspected **0.8.0 baseline** CI run passed **158 Android unit/Robolectric tests and 12 Python tests**. Formatting, Android lint, and the debug build also passed. Lint reported no errors and 63 warnings per variant. The 0.8.1 review covers the branding and version changes; its validation is documented separately below. This documentation repository does not run the application's tests.
 
 [Evidence, test scope, and remaining limitations →](docs/VALIDATION.md)
 
@@ -95,7 +97,7 @@ Lyrics lookup integrates [LRCLIB](https://lrclib.net/). The screenshots use fict
 <details>
 <summary>Español — presentación completa</summary>
 
-## Nimbo en español
+## Nimbo Player en español
 
 **Un reproductor nativo para Android que convierte tu biblioteca local en una experiencia musical personal.**
 
@@ -103,12 +105,14 @@ Explora la música de tu teléfono y tarjeta SD, adapta el reproductor a tu esti
 
 **Kotlin · Jetpack Compose · Media3 · SQLite · Python / Flask**
 
+**Actualización 0.8.1:** la aplicación ahora se llama **Nimbo Player**. El halo original incorpora un anillo central de vinilo y el nombre se actualiza en Android, la bienvenida, las historias mensuales y las exportaciones.
+
 [Recorrido del producto](docs/PRODUCT_TOUR.md) · [Arquitectura](docs/ARCHITECTURE.md) · [Decisiones técnicas](docs/ENGINEERING.md) · [Validación](docs/VALIDATION.md). Documentación ampliada en inglés.
 
 ### La experiencia
 
 <p align="center">
-  <img src="docs/assets/01-player.png" alt="Reproductor de Nimbo con ilustración de vinilo y texto grande" width="30%">
+  <img src="docs/assets/01-player.png" alt="Reproductor de Nimbo Player con ilustración de vinilo y texto grande" width="30%">
   &nbsp;
   <img src="docs/assets/02-statistics.png" alt="Resumen de escucha con estadísticas y clasificación de canciones" width="30%">
   &nbsp;
@@ -121,7 +125,7 @@ Reproducción, estadísticas y personalización. Son renders reales de la aplica
 
 Una colección musical es más que una lista de archivos. Quise crear un reproductor que cuide esa colección: organización útil, reproducción fiable en segundo plano, opciones visuales personales y una forma de recordar lo que escuchaste.
 
-Mi trabajo abarca la interfaz Android, el servicio de reproducción, la persistencia local, las estadísticas, la composición y exportación de resúmenes y la API de cuentas y respaldos estadísticos. La versión revisada es **0.8.0**, para **Android 10 y posteriores**.
+Mi trabajo abarca la interfaz Android, el servicio de reproducción, la persistencia local, las estadísticas, la composición y exportación de resúmenes y la API de cuentas y respaldos estadísticos. La versión actual revisada es **0.8.1**, para **Android 10 y posteriores**.
 
 ### Funcionalidades
 
@@ -173,13 +177,13 @@ Las historias comparten una misma composición gráfica para la vista en pantall
 
 ### Validación
 
-La ejecución de integración continua revisada en el código privado aprobó **158 pruebas Android unitarias/Robolectric y 12 pruebas Python**. También se aprobaron el formato, Android lint y la compilación debug. Lint registró cero errores y 63 advertencias por variante. Estos resultados corresponden a la revisión de código indicada en la documentación; este repositorio de presentación no ejecuta las pruebas de la aplicación.
+La ejecución de integración continua inspeccionada de la **base 0.8.0** aprobó **158 pruebas Android unitarias/Robolectric y 12 pruebas Python**. También se aprobaron el formato, Android lint y la compilación debug. Lint registró cero errores y 63 advertencias por variante. La revisión 0.8.1 cubre la marca y el cambio de versión, con su validación documentada por separado. Este repositorio de presentación no ejecuta las pruebas de la aplicación.
 
 [Evidencia, alcance y limitaciones →](docs/VALIDATION.md)
 
 ### Acerca de este repositorio
 
-Esta es la ficha pública de Nimbo dentro de mi portafolio, con un historial independiente de documentación. El código de la aplicación, la configuración operativa, el material de firma y las versiones compiladas se mantienen por separado en privado.
+Esta es la ficha pública de Nimbo Player dentro de mi portafolio, con un historial independiente de documentación. El código de la aplicación, la configuración operativa, el material de firma y las versiones compiladas se mantienen por separado en privado.
 
 La consulta de letras integra [LRCLIB](https://lrclib.net/). Las capturas utilizan datos ficticios e ilustraciones originales de prueba; este repositorio no redistribuye un catálogo musical ni de letras. Consulta la [procedencia visual](docs/assets/README.md) y los [derechos de autor](COPYRIGHT.md).
 
