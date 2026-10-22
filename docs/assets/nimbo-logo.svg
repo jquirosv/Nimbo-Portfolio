@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="18 18 72 72" role="img" aria-labelledby="title desc">
-  <title id="title">Nimbo</title>
-  <desc id="desc">Halo sonoro abierto con una onda integrada, en blanco perla y lavanda sobre azul noche.</desc>
+  <title id="title">Nimbo Player</title>
+  <desc id="desc">Halo sonoro abierto con onda integrada y un círculo central de vinilo, en blanco perla y lavanda sobre azul noche.</desc>
   <rect x="18" y="18" width="72" height="72" rx="16" fill="#202638"/>
   <g fill="none" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="#F1F0F6" d="M79,53C79,39 67.8,28 54,28C39.6,28 28,39.6 28,54C28,62 30.7,69.2 35.3,73C41.1,77.9 46.4,68.7 52.6,68.6C59.1,68.6 61.8,75 66.3,75"/>
     <path stroke="#BCB1E5" d="M71,73C75.2,69.2 78,64.1 79,58"/>
+    <circle cx="54" cy="53" r="6" stroke="#F1F0F6" stroke-width="3"/>
   </g>
 </svg>

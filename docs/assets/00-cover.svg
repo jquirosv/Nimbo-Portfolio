@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
-  <title id="title">Nimbo — Your library. Your listening story.</title>
-  <desc id="desc">Nimbo's sound halo on a navy background with lavender accents. Native Android music player.</desc>
+  <title id="title">Nimbo Player — Your library. Your listening story.</title>
+  <desc id="desc">Nimbo Player's original sound halo with its central vinyl ring on a navy background with lavender accents.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171c2a"/><stop offset="1" stop-color="#30304b"/></linearGradient>
     <radialGradient id="glow"><stop stop-color="#BCB1E5" stop-opacity=".16"/><stop offset="1" stop-color="#BCB1E5" stop-opacity="0"/></radialGradient>
@@ -9,13 +9,14 @@
   <circle cx="1055" cy="285" r="380" fill="url(#glow)"/>
   <g fill="none" stroke="#BCB1E5" stroke-opacity=".10"><circle cx="1055" cy="285" r="226"/><circle cx="1055" cy="285" r="265"/><circle cx="1055" cy="285" r="304"/></g>
   <text x="76" y="88" fill="#BCB1E5" font-family="Arial, sans-serif" font-size="15" letter-spacing="3">NATIVE ANDROID MUSIC PLAYER</text>
-  <text x="70" y="239" fill="#F1F0F6" font-family="Arial, sans-serif" font-size="116" font-weight="700" letter-spacing="-5">Nimbo</text>
+  <text x="72" y="239" fill="#F1F0F6" font-family="Arial, sans-serif" font-size="90" font-weight="700" letter-spacing="-3">Nimbo Player</text>
   <text x="76" y="317" fill="#F1F0F6" font-family="Arial, sans-serif" font-size="36">Your library.</text>
   <text x="76" y="368" fill="#BCB1E5" font-family="Arial, sans-serif" font-size="36">Your listening story.</text>
   <text x="77" y="426" fill="#c0c2d0" font-family="Arial, sans-serif" font-size="20">Local music. Personal insights. Shareable recaps.</text>
-  <g transform="translate(825 88) scale(4.2)" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(825 88) scale(4.2)" fill="none" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
     <path stroke="#F1F0F6" d="M79,53C79,39 67.8,28 54,28C39.6,28 28,39.6 28,54C28,62 30.7,69.2 35.3,73C41.1,77.9 46.4,68.7 52.6,68.6C59.1,68.6 61.8,75 66.3,75"/>
     <path stroke="#BCB1E5" d="M71,73C75.2,69.2 78,64.1 79,58"/>
+    <circle cx="54" cy="53" r="6" stroke="#F1F0F6" stroke-width="3"/>
   </g>
   <path d="M76 506H1204" stroke="#BCB1E5" stroke-opacity=".24"/>
   <text x="77" y="555" fill="#F1F0F6" font-family="Arial, sans-serif" font-size="18">Kotlin / Jetpack Compose / Media3</text>

@@ -1,6 +1,6 @@
 # Visual assets and provenance
 
-[← Nimbo](../../README.md)
+[← Nimbo Player](../../README.md)
 
 The PNG files are unchanged copies of app-generated render fixtures. Synthetic song names, artists, lyrics, totals, and geometric artwork originate in the project's tests. No commercial recording, lyrics catalog, personal account screen, or operational dashboard is included.
 
@@ -15,7 +15,11 @@ The PNG files are unchanged copies of app-generated render fixtures. Synthetic s
 | `07-player-landscape.png` | `Nimbo-v0.7.1-reproductor-horizontal-dinamico-texto200.png` | Landscape, 200% text |
 | `08-lyrics.png` | `Nimbo-v0.7.1-letra-texto200.png` | Invented local lyrics, 200% text |
 
-`00-cover.svg` is a presentation graphic created for this case study. It uses Nimbo's existing halo mark and navy, pearl, and lavender palette; it is not an application screenshot. `nimbo-logo.svg` is copied unchanged from the project's brand assets.
+`00-cover.svg` is a presentation graphic created for this case study. It uses Nimbo Player's original halo, its new central vinyl ring, and the navy, pearl, and lavender palette; it is not an application screenshot. `nimbo-logo.svg` preserves the source brand vector (with canonical LF text), and `nimbo-logo.png` is an unchanged copy of the source PNG.
+
+Original brand artwork: [SVG](nimbo-logo.svg) · [PNG](nimbo-logo.png).
+
+The 0.8.1 update changes the displayed brand to **Nimbo Player**. The gallery images above predate this change and retain their original pixels and version labels. They are not presented as new 0.8.1 captures.
 
 StatisticsDesignTest generates the fictional statistics. MonthlyRecapTest generates the recap's placeholder artwork and listening data. Player and appearance layout tests generate the other selected views. The project UI is in Spanish; the README has complete English and Spanish presentations. The supporting technical documents are in English.
 
